@@ -1,0 +1,23 @@
+[% WRAPPER 'include/layout.tt' %]
+
+    <!-- home page -->
+    <div id="home" data-role="page">
+        <div data-role="header">
+            <h1>Advent Calendar 2011</h1>
+        </div>
+        <div data-role="content">
+            <ul data-filter="true" data-role="listview">
+              [% FOREACH row IN rs_parent %]
+                <li>
+                  <a href="#item_[% row.id %]" data-transition="slide"><p>[% row.title %]</p></a>
+                  <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">[% row.count %]</span>
+                </li>
+              [% END %]
+            </ul>
+        </div>
+    </div>
+   [% FOREACH row IN rs_parent %]
+    [% INCLUDE "item.tt" WITH parent_id = row.id, parent_title = row.title %]
+   [% END %]
+
+[% END %]

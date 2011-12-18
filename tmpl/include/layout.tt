@@ -1,0 +1,14 @@
+<!doctype html>
+<html> 
+	<head> 
+	<meta charset="UTF-8">
+	<title>Advent Calendar 2011</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="/static/css/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="/static/js/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body>
+  [% content %]
+</body>
+</html>
